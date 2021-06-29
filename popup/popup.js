@@ -6,5 +6,7 @@ const text_input = document.getElementById('text_input')
 text_input.addEventListener("input", function(event) {
   var text = text_input.value
   charCount.innerHTML = "Character Count: " + text.length
+  text = text.replace(/\s+/g,'')
+  noSpaceCount.innerHTML = "Character Count w/o Spaces: " + text.length
 })
 
